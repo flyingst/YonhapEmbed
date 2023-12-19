@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>연합뉴스</title>
+        <style>
+            body,
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img
+                src="./top.png"
+                alt=""
+            />
+            <iframe
+                id="reactIframe"
+                src="https://qa.games.yna.co.kr/embed?screen=m&gameType=Crossword"
+                width="1020"
+                height="1100"
+            ></iframe>
+            <img
+                src="./bottom.png"
+                alt=""
+            />
+        </div>
+
+        <script>
+            document.getElementById("reactIframe").onload = function () {
+                console.log("iFrame이 로드되었습니다.");
+            };
+        </script>
+    </body>
+</html>
